@@ -8,15 +8,21 @@
 import Foundation
 
 enum Resources {
-    enum images {
+    enum Images {
         static var calculator = "calculate_background"
         static var result = "result_background"
     }
     
     enum Advices: String {
-        case no = "No advice"
+        case weightless = "You are weightless!"
         case underweight = "Eat more peis!"
         case normal = "Fit as a fiddle!"
         case overweight = "Eat less a pies!"
+    }
+    
+    enum BackgroundColor {
+        case blue
+        case green
+        case red
     }
 }

@@ -20,6 +20,7 @@
 		10BD3909298892D000FEFA31 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BD3908298892D000FEFA31 /* CalculatorView.swift */; };
 		10BD390B298892E400FEFA31 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BD390A298892E400FEFA31 /* ResultView.swift */; };
 		10BD390D298893DF00FEFA31 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BD390C298893DF00FEFA31 /* Resources.swift */; };
+		10BD391129894A4E00FEFA31 /* UIColor +ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BD391029894A4E00FEFA31 /* UIColor +ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		10BD3908298892D000FEFA31 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		10BD390A298892E400FEFA31 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		10BD390C298893DF00FEFA31 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		10BD391029894A4E00FEFA31 /* UIColor +ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor +ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				10BD390C298893DF00FEFA31 /* Resources.swift */,
+				10BD391029894A4E00FEFA31 /* UIColor +ext.swift */,
 				10BD38E829888EEB00FEFA31 /* Assets.xcassets */,
 				10BD38EA29888EEB00FEFA31 /* LaunchScreen.storyboard */,
 				10BD38ED29888EEB00FEFA31 /* Info.plist */,
@@ -218,6 +221,7 @@
 			files = (
 				10BD39012988910600FEFA31 /* BMI.swift in Sources */,
 				10BD3909298892D000FEFA31 /* CalculatorView.swift in Sources */,
+				10BD391129894A4E00FEFA31 /* UIColor +ext.swift in Sources */,
 				10BD38E029888EEB00FEFA31 /* AppDelegate.swift in Sources */,
 				10BD38FD2988908700FEFA31 /* CalculatorViewController.swift in Sources */,
 				10BD38FF298890C400FEFA31 /* CalculatorBrain.swift in Sources */,

@@ -8,22 +8,47 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
+    
+    let calculatorView = CalculatorView()
+    var brain = CalculatorBrain()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view = calculatorView
+        addTartetButton()
+        addTargetSlider()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func addTartetButton() {
+        calculatorView.navButton.addTarget(self, action: #selector(didPress), for: .touchUpInside)
     }
-    */
-
+    
+    @objc
+    func didPress(_ sender: UIButton) {
+        brain.calculatorBMI(
+            calculatorView.heightSlider.value,
+            calculatorView.weightSlider.value)
+        
+        let resultVC = ResultViewController()
+        resultVC.bmi = brain.getBMI()
+        resultVC.modalPresentationStyle = .fullScreen
+        self.present(resultVC, animated: true)
+    }
+    
+    private func addTargetSlider() {
+        [calculatorView.heightSlider, calculatorView.weightSlider].forEach { slider in
+            slider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
+        }
+    }
+    
+    @objc
+    func sliderChanged(_ sender: UISlider) {
+        if sender == calculatorView.heightSlider {
+            let height = String(format: "%.2f", sender.value)
+            calculatorView.heightValueLabel.text = height + "m"
+        } else {
+            let weight = String(format: "%.0f", sender.value)
+            calculatorView.weightValueLabel.text = weight + "Kg"
+        }
+    }
 }
